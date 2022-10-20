@@ -1,0 +1,63 @@
+﻿@page "/Q3Q4Q5"
+@using System.Globalization
+@using BlazorDownloadFile
+@using System.Text.Json
+
+<PageTitle>Questão 3, 4 e 5</PageTitle>
+<h3>Questão 3, 4 e 5</h3>
+
+<button @onclick=@(async () => await BlazorDownloadFileService.DownloadFileFromText("data.json", GerarLista(), System.Text.Encoding.UTF8, "application/octet-stream"))>Criar JSON</button>
+<button @onclick="ExibirJson">Carregar lista</button>
+
+@if(listaExibir.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Numero</th>
+                <th>Descricao</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (ClsTeste item in listaExibir)
+            {
+                <tr>
+                    <td>@item.Numero</td>
+                    <td>@item.Descricao</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    List<ClsTeste> lista = new();
+    List<ClsTeste> listaExibir = new();
+
+    [Inject] public IBlazorDownloadFileService BlazorDownloadFileService { get; set; }
+
+    private class ClsTeste
+    {
+        public int Numero { get; set; }
+        public string Descricao { get; set; }
+
+        public ClsTeste(int num, string descricao)
+        {
+            Numero = num;
+            Descricao = descricao;
+        }
+    }
+
+    private string GerarLista()
+    {
+        for (int i = 0; i < 100; i++)
+            lista.Add(new ClsTeste(i, DateTime.Now.ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss.fffffffK")));
+
+        return JsonSerializer.Serialize(JsonSerializer.Serialize(lista));
+    }
+
+    private void ExibirJson()
+    {
+        string listaJson = JsonSerializer.Deserialize<string>(GerarLista());
+    }
+}

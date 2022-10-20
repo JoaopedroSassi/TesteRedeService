@@ -1,0 +1,47 @@
+﻿@page "/Q7"
+@inject HttpClient Http
+
+<PageTitle>Questão 7</PageTitle>
+<h3>Questão 7</h3>
+
+@if (banks != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Ispb</th>
+                <th>Name</th>
+                <th>Code</th>
+                <th>Full Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Bank bank in banks)
+            {
+                <tr>
+                    <td>@bank.Ispb</td>
+                    <td>@bank.Name</td>
+                    <td>@bank.Code</td>
+                    <td>@bank.FullName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private Bank[] banks;
+
+    protected override async Task OnInitializedAsync()
+    {
+        banks = await Http.GetFromJsonAsync<Bank[]>("https://brasilapi.com.br/api/banks/v1");
+    }
+
+    private class Bank
+    {
+        public int Ispb { get; set; }
+        public string Name { get; set; }
+        public int? Code { get; set; }
+        public string FullName { get; set; }
+    }
+}

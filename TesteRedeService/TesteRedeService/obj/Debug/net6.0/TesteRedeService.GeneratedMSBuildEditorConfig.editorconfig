@@ -1,0 +1,67 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = browser
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = TesteRedeService
+build_property.RootNamespace = TesteRedeService
+build_property.ProjectDir = C:\Users\Sassi\Desktop\Teste\Blazor\TesteRedeService\TesteRedeService\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Sassi\Desktop\Teste\Blazor\TesteRedeService\TesteRedeService
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Sassi/Desktop/Teste/Blazor/TesteRedeService/TesteRedeService/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sassi/Desktop/Teste/Blazor/TesteRedeService/TesteRedeService/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sassi/Desktop/Teste/Blazor/TesteRedeService/TesteRedeService/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sassi/Desktop/Teste/Blazor/TesteRedeService/TesteRedeService/Pages/Q3Q4Q5.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUTNRNFE1LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sassi/Desktop/Teste/Blazor/TesteRedeService/TesteRedeService/Pages/Q7.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUTcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sassi/Desktop/Teste/Blazor/TesteRedeService/TesteRedeService/Pages/Q8.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUTgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sassi/Desktop/Teste/Blazor/TesteRedeService/TesteRedeService/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sassi/Desktop/Teste/Blazor/TesteRedeService/TesteRedeService/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sassi/Desktop/Teste/Blazor/TesteRedeService/TesteRedeService/Pages/Q1Q2.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUTFRMi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-8r9s1ihikb
+
+[C:/Users/Sassi/Desktop/Teste/Blazor/TesteRedeService/TesteRedeService/Pages/Q6.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUTYucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-y3dih22pcx
+
+[C:/Users/Sassi/Desktop/Teste/Blazor/TesteRedeService/TesteRedeService/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-2rkyb2trbr
+
+[C:/Users/Sassi/Desktop/Teste/Blazor/TesteRedeService/TesteRedeService/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-7p968uef4o

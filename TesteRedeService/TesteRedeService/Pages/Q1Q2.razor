@@ -1,0 +1,51 @@
+﻿@page "/Q1Q2"
+@using BlazorDownloadFile
+@using System.Text
+
+<h3>Questão 1 e 2</h3>
+
+<p>Informe 1 número:</p>
+<input type="number" @bind-value="num"/>
+<button @onclick='AddNum'>Add</button>
+
+<ul id="listaNums">
+    @foreach(int item in numeros)
+    {
+        <li>
+            <label>
+                @item
+            </label>
+        </li>
+    }
+</ul>
+
+@if(numeros.Any())
+{
+    <button @onclick=@(async () => await BlazorDownloadFileService.DownloadFileFromText("numeros_ordenar.txt", GerarTexto(), System.Text.Encoding.UTF8, "application/octet-stream"))>Gerar arquivo</button>
+}
+
+@code {
+    [Inject] public IBlazorDownloadFileService BlazorDownloadFileService { get; set; }
+
+    private int num { get; set; }
+    private List<int> numeros = new(); 
+
+    void AddNum()
+    {
+        numeros.Add(num);
+        numeros.Sort();
+        num = 0;
+    }
+
+    private string GerarTexto()
+    {
+        StringBuilder text = new StringBuilder();
+
+        foreach(int num in numeros)
+        {
+            text.AppendLine(num.ToString());
+        }
+
+        return text.ToString();
+    }
+}

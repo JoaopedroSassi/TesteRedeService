@@ -1,0 +1,64 @@
+﻿@page "/Q6"
+@inject HttpClient Http
+
+<PageTitle>Questão 6</PageTitle>
+<h3>Questão 6</h3>
+
+<label for="cep">Digite o seu cep:</label>
+<input id="cep" type="text" @bind="cep" />
+<button @onclick="SearchAddress" id="btnConsulta">Consultar</button>
+<br />
+
+<input id="logradouro" type="text" value="@logradouro" disabled />
+<input id="complemento" type="text" value="@complemento" disabled />
+<input id="bairro" type="text" value="@bairro" disabled />
+<input id="localidade" type="text" value="@localidade" disabled />
+<input id="uf" type="text" value="@uf" disabled />
+<input id="ibge" type="text" value="@ibge" disabled />
+<input id="gia" type="text" value="@gia" disabled />
+<input id="ddd" type="text" value="@ddd" disabled />
+<input id="siafi" type="text" value="@siafi" disabled />
+
+
+@code {
+    private Address address = new();
+    private string cep = string.Empty;
+
+    private string logradouro = string.Empty;
+    private string complemento = string.Empty;
+    private string bairro = string.Empty;
+    private string localidade = string.Empty;
+    private string uf = string.Empty;
+    private string ibge = string.Empty;
+    private string gia = string.Empty;
+    private string ddd = string.Empty;
+    private string siafi = string.Empty;
+
+    private async Task SearchAddress()
+    {
+        address = await Http.GetFromJsonAsync<Address>($"https://viacep.com.br/ws/{cep}/json/");
+        logradouro = address.Logradouro;
+        complemento = address.Complemento;
+        bairro = address.Bairro;
+        localidade = address.Localidade;
+        uf = address.Uf;
+        ibge = address.Ibge;
+        gia = address.Gia;
+        ddd = address.Ddd;
+        siafi = address.Siafi;
+    }
+
+    private class Address
+    {
+        public string Cep { get; set; }
+        public string Logradouro { get; set; }
+        public string Complemento { get; set; }
+        public string Bairro { get; set; }
+        public string Localidade { get; set; }
+        public string Uf { get; set; }
+        public string Ibge { get; set; }
+        public string Gia { get; set; }
+        public string Ddd { get; set; }
+        public string Siafi { get; set; }
+    }
+}
