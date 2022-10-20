@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cfZvlcQdsAi5BfaLG7lnan3gJlJxv6jdW8E+X/8rwqlRSq0j8Jl6RoohE6slnTgbmWeQ4QQKNPYHKe3MiyrWDw==",
+  "dgSpecHash": "jtYdeUYhfhZeQv/Eu7EfElE+OTpKdXCWj28fa4B4J6u/MBvBAlbJZ2ffupFD73YYGiiXE8Tt73u8TWf4gqmaKg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sassi\\Desktop\\Teste\\Blazor\\TesteRedeService\\TesteRedeService\\TesteRedeService.csproj",
+  "projectFilePath": "C:\\Users\\Sassi\\Desktop\\TesteRedeService\\TesteRedeService\\TesteRedeService\\TesteRedeService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sassi\\.nuget\\packages\\blazordownloadfile\\2.4.0.2\\blazordownloadfile.2.4.0.2.nupkg.sha512",
     "C:\\Users\\Sassi\\.nuget\\packages\\easynetq\\7.2.1\\easynetq.7.2.1.nupkg.sha512",
